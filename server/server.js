@@ -4,6 +4,8 @@ import cookieParser from 'cookie-parser';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
+import auth from './routes/auth.js'
+import hospitals from './routes/hospitals.js'
 
 // Load environment variables
 dotenv.config();
@@ -33,6 +35,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors(
     { origin: true, credentials: true }
 ))
+
+app.use('/auth', auth)
+app.use('/hospitals', hospitals)
 
 const port = process.env.PORT || 8080
 
