@@ -5,6 +5,7 @@ function Home() {
     <div>
 
       <h1>this is home page adding button(dropdown)</h1>
+      <h1>this is home page adding button(menu)</h1>
 
       <h1>this is home page that i have created</h1>
 
